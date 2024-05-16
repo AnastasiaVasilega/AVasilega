@@ -24,6 +24,7 @@ int main() {
     std::thread thread1(sortPart, std::ref(numbers), 0, size / 2);
     std::thread thread2(sortPart, std::ref(numbers), size / 2, size);
 
+    //ожидание завершения работы определенного потока, прежде чем продолжить выполнение основного потока или других операций
     thread1.join();
     thread2.join();
 
